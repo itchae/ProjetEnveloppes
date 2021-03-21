@@ -1,21 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react'; //permet de créer des composants
+import { StyleSheet, View } from 'react-native'; //composants react native
+import Guichet from './components/Guichet';
 
 export default function App() {
-  return (
+
+  const [totalAmountFive, setTotalAmountFive] = useState(0);
+  const [totalAmountTen, setTotalAmountTen] = useState(0);
+  const [totalAmountTwenty, setTotalAmountTwenty] = useState(0);
+  const [totalAmountFifty, setTotalAmountFifty] = useState(0);
+
+  const billTotalAmount = totalAmountFive + totalAmountTen + totalAmountTwenty + totalAmountFifty;
+  const maxValue = 500;
+  const reste = maxValue - billTotalAmount;
+  return ( //JSX
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Guichet/>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // stylesheet permet juste d'être un peu plus performant et d'avoir plus de controle
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff', //utiliser camelCase pour le style 
     alignItems: 'center',
     justifyContent: 'center',
   },
+  rowBill: {
+    flexDirection: 'row'
+  }
 });
