@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; //permet de créer des composants
 import { StyleSheet, View } from 'react-native'; //composants react native
-import Guichet from './components/Guichet';
+import Guichet from './client/pages/Guichet';
 
 export default function App() {
 

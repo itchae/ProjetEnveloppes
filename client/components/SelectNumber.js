@@ -1,14 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import React, {useState} from 'react'; //permet de créer des composants
-import { Button, StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native'; //composants react native
+import React from 'react'; //permet de créer des composants
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'; //composants react native
 
-export default function SelectNumber({onChange, numberOfBill, setNumberOfBill, disabled}) {
+export default function SelectNumber({numberOfBill, setNumberOfBill, disabled}) {
 
     const decrement = () => {
         const res = parseInt(numberOfBill)-1;
         if(parseInt(numberOfBill)>0){
             setNumberOfBill(res.toString());
-            onChange(parseInt(numberOfBill)-1);
         }
         
     }
@@ -17,7 +15,6 @@ export default function SelectNumber({onChange, numberOfBill, setNumberOfBill, d
         if(!disabled){
             const res = parseInt(numberOfBill)+1
             setNumberOfBill(res.toString());
-            onChange(parseInt(numberOfBill)+1);
         }
     }
 
