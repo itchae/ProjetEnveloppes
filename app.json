@@ -1,0 +1,12 @@
+{
+  "name": "ProjetEnveloppes",
+  "displayName": "ProjetEnveloppes",
+  "expo": {
+    "name": "ProjetEnveloppes",
+    "slug": "ProjetEnveloppes",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
